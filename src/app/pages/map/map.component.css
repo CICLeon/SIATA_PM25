@@ -1,0 +1,10 @@
+.sizeMap{
+    height: 90%;
+    width: 90%;
+    border-color: #081f2d;
+    border-width: 1px;
+}
+
+.circleMap{
+    background: radial-gradient(circle, blue, #800080);
+}

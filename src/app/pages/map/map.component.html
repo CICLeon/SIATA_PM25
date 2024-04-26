@@ -1,0 +1,39 @@
+<div class="w-full flex align-items-end justify-content-center" style="height: 25%;">
+    <div class="p-2 w-11">
+        <h1 class="m-0 mb-2 text-center">Indice de contaminación AQI del Aire</h1>
+        <p-floatLabel>
+            <p-calendar id="date" [(ngModel)]="selectDate" [showIcon]="true" dateFormat="dd/mm/yy" appendTo="body" [maxDate]="dateMax" [minDate]="dateMin" (onSelect)="onSelectDate(true)"></p-calendar>
+            <label for="date">Fecha del Histórico</label>
+        </p-floatLabel>
+    </div>
+</div>
+<div class="w-full flex justify-content-center" style="height: 75%;">
+    <div class="sizeMap relative border-1 border-round-xl">
+        <div #asMap id="map" class="w-full h-full z-0 border-round-xl"></div>
+        <div class="absolute bottom-0 right-0 z-1 pb-3">
+            <table border="1px" style="border-collapse: collapse; background-color: #081f2d;">
+                <tr>
+                    <td style="background-color: #91d23e; width: 20px;"></td>
+                    <td class="p-2 text-white text-sm">Buena [0-50]</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fce65e; width: 20px;"></td>
+                    <td class="p-2 text-white text-sm">Moderada [51-100]</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f8803a; width: 20px;"></td>
+                    <td class="p-2 text-white text-sm">Dañina para grupos sensibles [101-150]</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #df3539; width: 20px;"></td>
+                    <td class="p-2 text-white text-sm">Dañina a la salud [151-200]</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #53116a; width: 20px;"></td>
+                    <td class="p-2 text-white text-sm">Muy dañina a la salud [>200]</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
